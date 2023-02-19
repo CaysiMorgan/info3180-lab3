@@ -33,7 +33,7 @@ def contact():
             message =  form.message.data
 
             msg = Message(subject, sender=(name, email),
-                          recipients=["jones.shemar.sj@gmail.com"])
+                          recipients=["Example@gmail.com"])
             msg.body = message
             mail.send(msg)
 
