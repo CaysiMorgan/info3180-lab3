@@ -30,11 +30,11 @@ def contact():
             name =  form.name.data
             email =  form.email.data
             subject =  form.subject.data
-            text_area =  form.text_area.data
+            message =  form.message.data
 
             msg = Message(subject, sender=(name, email),
                           recipients=["jones.shemar.sj@gmail.com"])
-            msg.body = text_area
+            msg.body = message
             mail.send(msg)
 
             flash("Form sucessfully completed!", "success")
